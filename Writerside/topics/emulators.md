@@ -5,3 +5,4 @@ different environments. It is a core of js-dos, emulators has standardized api a
 environments. Perfect solution for custom embedding.
 
 <img alt="emulators-logo.jpg" height="256" src="emulators-logo.jpg" title="Emulators Logo" width="256"/>
+

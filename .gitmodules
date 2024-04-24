@@ -1,0 +1,4 @@
+[submodule "Writerside/snippets/emulators"]
+	path = Writerside/snippets/emulators
+	url = git@github.com:caiiiycuk/emulators.git
+	branch = 8.xx
