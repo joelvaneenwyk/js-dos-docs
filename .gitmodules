@@ -2,3 +2,7 @@
 	path = Writerside/snippets/emulators
 	url = git@github.com:caiiiycuk/emulators.git
 	branch = 8.xx
+[submodule "Writerside/snippets/js-dos"]
+	path = Writerside/snippets/js-dos
+	url = git@github.com:caiiiycuk/js-dos.git
+	branch = 8.xx

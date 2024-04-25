@@ -1,4 +1,4 @@
-# Mouse locking (v7)
+# Mouse locking
 
 Some DOS games do not respect the mouse cursor position, they take into account only relative movement of the mouse cursor. This type of game requires a mouse locking feature.
 

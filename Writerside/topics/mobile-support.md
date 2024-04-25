@@ -1,4 +1,4 @@
-# Mobile support (v7)
+# Mobile support
 
 > js-dos v8 mobile support uses brand new mobile controls, they are still in development. Use **v7** if you need
 > mobile support just now.

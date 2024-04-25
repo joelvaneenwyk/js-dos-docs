@@ -7,17 +7,25 @@
                  start-page="Overview.md">
 
     <toc-element topic="Overview.md">
-        <toc-element topic="releases.md"/>
+        <toc-element topic="dos-api.md">
+        </toc-element>
         <toc-element topic="jsdos-bundle.md"/>
-        <toc-element topic="mobile-support.md"/>
-        <toc-element topic="mouse-locking.md"/>
+        <toc-element topic="Player-API.md"/>
+        <toc-element topic="v7.md">
+            <toc-element topic="mobile-support.md"/>
+            <toc-element topic="mouse-locking.md"/>
+        </toc-element>
+        <toc-element topic="releases.md"/>
         <toc-element topic="need-help.md"/>
     </toc-element>
     <toc-element topic="cloud-overview.md">
         <toc-element topic="networking.md"/>
     </toc-element>
     <toc-element topic="emulators.md">
-        <toc-element topic="threejs.md"/>
+        <toc-element topic="threejs.md">
+            <toc-element topic="Browser.md"/>
+            <toc-element topic="Node.md"/>
+        </toc-element>
         <toc-element topic="command-interface.md"/>
         <toc-element topic="dosbox-direct.md"/>
         <toc-element topic="dosbox-worker.md"/>
