@@ -5,7 +5,7 @@
     <variables>
         <web-root>https://js-dos.com</web-root>
         <download-title>Get js-dos</download-title>
-        <showDownloadButton>true</showDownloadButton>
+        <showDownloadButton>false</showDownloadButton>
         <download-page>https://github.com/caiiiycuk/js-dos/releases</download-page>
         <custom-favicons>logo-16.png,logo-32.png,logo-192.png,logo-512.png</custom-favicons>
         <header-logo>logo-512.png</header-logo>

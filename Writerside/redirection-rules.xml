@@ -6,8 +6,4 @@
         <accepts>page.html</accepts>
     </rule>
     -->
-    <rule id="5dc5cc74">
-        <description>Created after removal of "Getting Started" from js-dos</description>
-        <accepts>Getting-Started.html</accepts>
-    </rule>
 </rules>

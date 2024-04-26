@@ -1,6 +1,6 @@
 # js-dos
 
-The simplest API to run **DOS/Win 9x** games in browser.
+The simplest API to run **DOS/Win 9x** programs in browser or node.
 
 js-dos is a frontend for [emulators](https://github.com/caiiiycuk/emulators) that provides nice UI and infrastructure
 to run DOS or Windows programs in browser.
@@ -10,13 +10,14 @@ browser quickly. js-dos provide many advanced features like multiplayer and clou
 All available features are enabled for any integration and free.
 
 The key features:
-* Works in worker or render thread
+* Works in **worker** or render thread
 * Support execution in Node and Browsers
 * Multiple backends: DOSBox, DOSBox-X
 * Mobile support (v8 - WIP, v7 - production)
 * Able to run very big games (like Diablo, etc.)
 * Multiplayer support
 * Cloud storage
+* WebAssembly and pure JS versions
 
 > If you want to build custom DOS player, then please use [emulators](threejs.md) packages instead.
 

@@ -102,7 +102,7 @@ Client should run this function when it's ready to start dosbox. This
 function will start the emulator. Client should prepare file system for dosbox **it 
 expects that `cwd` contains `.jsdos/dosbox.conf` file**. 
 
-So you need to extract [js-dos bundle](overview.md#js-dos-bundle) in some directory and start sokol binary
+So you need to extract [js-dos bundle](jsdos-bundle.md) in some directory and start sokol binary
 in this directory, and it will act exactly in the same way as direct/worker dosbox.
 
 
@@ -301,7 +301,7 @@ all tests should pass.
 ## Running native js-dos v7
 
 As said above, you need to compile a `sokol` target with your favorite C++ toolkit. It will generate `sokol`
-executable. Next, you need to download some [js-dos bundle](overview.md#js-dos-bundle) for example
+executable. Next, you need to download some [js-dos bundle](jsdos-bundle.md) for example
 [digger](https://cdn.dos.zone/original/2X/2/24b00b14f118580763440ecaddcc948f8cb94f14.jsdos).
 
 `js-dos bundle` is a plain zip archive, you need to extract it in some folder. After that you
