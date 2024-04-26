@@ -1,4 +1,4 @@
-# Save/Load
+# Persist FS
 
 emulators supports saving and restoring changes made in file system. It works by dumping 
 changes of file system into second `bundle` and use it to override original file system
