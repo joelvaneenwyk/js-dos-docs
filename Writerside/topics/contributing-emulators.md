@@ -3,7 +3,7 @@ id: contributing-emulators
 title: Contributing
 ---
 
-To contribute to the `emulators` package do the following:
+To contribute to the `emulators` package, do the following:
 
 1. Checkout `emulators` repository
   
@@ -15,12 +15,12 @@ To contribute to the `emulators` package do the following:
 
 4. Now you can build everything with `gulp` command
 
-Native part of emulators is plain cmake project, you can open it
-in your favorite editor. Project have the following targets:
+Native part of emulators is a plain cmake project, you can open it
+in your favorite editor. The Project has the following targets:
 
 1. **`sokol`** - js-dos v7 native version: dosbox + UI based on [sokol](https://github.com/floooh/sokol).
 This version is exactly the same as the web version. **You should use this target
-to contribute in js-dos v7.**
+to contribute to js-dos v7.**
 2. **`direct`** - target is used to build the web-direct version of js-dos v7.
 You can compile it only with **emscripten**.
 3. **`worker`** - target is used to build the web-worker version of js-dos v7.
@@ -33,7 +33,7 @@ it to compare behaviour between original dosbox and js-dos v7.
 ## Protocol
 
 The idea of new js-dos v7 is that all targets (native and web) have exactly
-same way to communicate between client (native UI, browser UI) and dosbox.
+the same way to communicate between a client (native UI, browser UI) and dosbox.
 
 
 ```C
@@ -93,13 +93,13 @@ extern void server_network_disconnect(NetworkType networkType);
 ## Server
 
 For simplicity, you can think that the server is a dosbox.
-In the future servers can be implemented with different emulators. Now we support
+In the future, servers can be implemented with different emulators. Now we support
 only **dosbox implementation** (look at `jsdos.cmake`).
 
 ### server_run()
 
 Client should run this function when it's ready to start dosbox. This 
-function will start the emulator. Client should prepare file system for dosbox **it 
+function will start the emulator. Client should prepare a file system for dosbox **it 
 expects that `cwd` contains `.jsdos/dosbox.conf` file**. 
 
 So you need to extract [js-dos bundle](jsdos-bundle.md) in some directory and start sokol binary
@@ -118,12 +118,12 @@ Terminates execution of dosbox and free resources.
 ## Client
 
 Direct, worker, and sokol implementations share the same code for server part. But they are completely different,
-because they implement UI and sound system for different platforms. In original dosbox this was made
-by SDL, it was hard-coupled with dosbox. js-dos clearly detaches the emulator from its ui. You can easily add new
+because they implement UI and sound system for different platforms. In the original dosbox this was made
+by SDL, it was hard-coupled with dosbox. js-dos clearly detach the emulator from its ui. You can easily add new
 UI/sound system to dosbox. 
 
-For example, let's look on sokol UI implementation. You can use it to debug and develop new features for js-dos.
-Worker is a primary web implementation for js-dos v7. sokol implementation tries to work in similar way: we start
+For example, let's look at sokol UI implementation. You can use it to debug and develop new features for js-dos.
+Worker is a primary web implementation for js-dos v7. sokol implementation tries to work in a similar way: we start
 dosbox emulator in main thread and client in new thread.
 
 ```C++
@@ -136,7 +136,7 @@ void runRuntime() {
 
 ### client_frame_set_size(width, height)
 
-When the server starts it will send the frame size of the dosbox window by invoking `client_frame_set_size`. You should allocate rgba buffer to store frame content. This function will be called each time when dosbox window size is changed.
+When the server starts, it will send the frame size of the dosbox window by invoking `client_frame_set_size`. You should allocate rgba buffer to store frame content. This function will be called each time when dosbox window size is changed.
 
 
 ```C++

@@ -1,6 +1,6 @@
 # Getting Started
 
-js-dos does not require any backend to start. You need to have some static website hosting where you put
+js-dos do not require any backend to start. You need to have some static website hosting where you put
 your webpage with DOS.
 
 You can start with any template of webpage you want. You only need some div element where to put 
@@ -8,7 +8,7 @@ dos window.
 
 ## Adding js-dos to your web page
 
-This is common thing in web development, you need to add js-dos related scripts to your webpage.
+This is a common thing in web development, you need to add js-dos related scripts to your webpage.
 js-dos provide a CDN with latest version, just add this html to `<head>` section of page:
 
 ```html

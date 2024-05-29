@@ -1,11 +1,9 @@
 # js-dos cloud
 
-js-dos offers cloud services that improves user experience. They include:
+js-dos offers cloud services that improve user experience. They include:
 
-* Storing saves in cloud, that means you can restore your progress on any browser.
+* Storing saves in the cloud, that means you can restore your progress on any browser.
 * Networking that allows you to play multiplayer dos games.
-* Fat16, Fat32 network drives (make-vm)
+* Fat16, Fat32 network drives (sockdrive)
 
-To activate cloud services you need to login in js-dos player. 
-
-[Read more](https://dos.zone/blog/premium-subscription/)
+To activate cloud services, you need to subscribe to js-dos [subscription](Subscription.md).

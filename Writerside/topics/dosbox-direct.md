@@ -1,13 +1,13 @@
 # DOSBox Direct
 
-DOS Direct is an emulation backend based on DOSBox, you can create it with following command:
+DOS Direct is an emulation backend based on DOSBox, you can create it with the following command:
 
 ```Javascript
 const ci = await emulators.dosboxDirect(bundle);
 ```
 
 Direct version is universal, it can work in Node.js environment. But it has a strong disadvantage: it's working on the 
-main browser thread. So it can easily hang a browser for some amount of time, and not be very responsive.
+main browser thread. So it can easily the app froze a browser for some amount of time, and not be very responsive.
 
 > [DOSBox Worker](dosbox-worker.md) is a more preferred version of the emulator backend, because it does not block the browser.
 > 
@@ -45,8 +45,8 @@ ci.transport.module._dumpMemory(copyDosMemory);
 ci.transport.module.memoryContents // <-- now you can access contents using this var
 ```
 
-If you need to copy entire memory pass `true` as argument.
-The `memoryContents` contains following:
+If you need to copy the entire memory, pass `true` as argument.
+The `memoryContents` contains the following:
 
 
 ```Javascript

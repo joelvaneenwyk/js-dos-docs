@@ -1,11 +1,11 @@
 # Browser
 
-In this example you will learn how to use `emulators` with `three.js` renderer.
+In this example, you will learn how to use `emulators` with `three.js` renderer.
 We will create a rotating cube with a digger game.
 
 ![threejs.jpg](threejs.jpg)
 
-First you need to include `emulators.js`:
+First, you need to include `emulators.js`:
 
 <tabs>
 <tab title="v8">
@@ -25,7 +25,7 @@ First you need to include `emulators.js`:
 </tab>
 </tabs>
 
-Then set `emulators.pathPrefix` pointing to correct location:
+Then set `emulators.pathPrefix` pointing to the correct location:
 <tabs>
 <tab title="v8">
 
@@ -46,14 +46,14 @@ Then set `emulators.pathPrefix` pointing to correct location:
 </tabs>
 
 
-Then you need to download js-dos bundle (for example Digger game), and instantiate emulators:
+Then you need to download js-dos bundle (for example, Digger game), and instantiate emulators:
 ```Typescript
 const bundle = await fetch("https://cdn.dos.zone/original/2X/9/9ed7eb9c2c441f56656692ed4dc7ab28f58503ce.jsdos");
 const ci = await emulators.dosWorker(new Uint8Array(await bundle.arrayBuffer()));
 ```
 
-Now the DOS program is started in worker, and we need to render it on the screen. To do this
-we need to subscribe on `frame` event and update texture:
+Now the DOS program is started in worker, and we need to render it on the screen.
+To do this, we need to subscribe to `frame` event and update texture:
 
 ```Typescript
 const rgba = new Uint8ClampedArray(320 * 200 * 4);
@@ -71,7 +71,7 @@ ci.events().onFrame((rgb) => {
 }
 ```
 
-Where `rgb` is actual DOS screen frame.
+Where `rgb` is an actual DOS screen frame.
 
 
 ```Typescript

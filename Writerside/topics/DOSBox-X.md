@@ -1,6 +1,6 @@
 # DOSBox-X
 
-The DOSBox-X emulation backend is capable of running operating systems up to Windows 98/ME. You can utilize it to run
+The DOSBox-X emulation backend is capable of running operating systems up to Windows 98/ME. You can use it to run
 Windows games or arbitrary Windows programs. It may be a bit slower than traditional DOSBox emulation.
 
 DOSBox-X emulation supports execution in worker, networking, and all other features that js-dos provides.
