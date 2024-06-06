@@ -4,12 +4,12 @@ js-dos do not require any backend to start. You need to have some static website
 your webpage with DOS.
 
 You can start with any template of webpage you want. You only need some div element where to put 
-dos window.
+a dos window.
 
 ## Adding js-dos to your web page
 
 This is a common thing in web development, you need to add js-dos related scripts to your webpage.
-js-dos provide a CDN with latest version, just add this html to `<head>` section of page:
+js-dos provide a CDN with the latest version, just add this html to `<head>` section of page:
 
 ```html
 <!-- js-dos style sheet -->
@@ -22,17 +22,17 @@ js-dos provide a CDN with latest version, just add this html to `<head>` section
 ## Provide js-dos bundle to run
 
 The easiest way to run some program is to prepare [js-dos bundle](jsdos-bundle.md). You can do it 
-manually, but easier way is to use [Studio](doszone.md).
+manually, but the easier way is to use [Studio](doszone.md).
 
-In this example we will use a bundle of Digger game.
+In this example, we will use a bundle of Digger game.
 Direct link to it: 
 ```
 https://cdn.dos.zone/original/2X/9/9ed7eb9c2c441f56656692ed4dc7ab28f58503ce.jsdos
 ```
 
-## Write script to run DOS
+## Write a script to run DOS
 
-Last part: we need to provide create some div element and tell js-dos to run bundle using that div:
+Now, we need to provide some div element and tell js-dos to run bundle using t:
 
 ```html
 <div id="dos"></div>
@@ -46,7 +46,7 @@ Last part: we need to provide create some div element and tell js-dos to run bun
 
 That is, Dos constructor takes two arguments:
 
-1. div element where to put dos window
+1. div element where to put a dos window
 2. options with initial configuration
 
 
@@ -58,9 +58,9 @@ That is, Dos constructor takes two arguments:
 
 Open your test webpage in browser, you should see something like this:
 
-![digger-v8.png](digger-v8.png)
+![startup window](preview.jpg)
 
-> Do not try to run it using file:// protocol, it will not work.
+> Do not try to run it using **file://** protocol, it will not work.
 > You need to host it locally. (http://localhost:8080)
 > 
 {style="warning"}

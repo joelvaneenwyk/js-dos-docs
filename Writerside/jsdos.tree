@@ -17,6 +17,8 @@
             <toc-element topic="mouse-locking.md"/>
         </toc-element>
         <toc-element topic="Advanced-Topics.md">
+            <toc-element topic="working-with-fs.md"/>
+            <toc-element topic="run-without-bundle.md"/>
             <toc-element topic="Multiple-Instances.md"/>
             <toc-element topic="Pure-JS.md">
             </toc-element>
@@ -32,7 +34,10 @@
         <toc-element topic="networking.md">
         </toc-element>
         <toc-element topic="sockdrive.md">
+            <toc-element topic="Getting-Started.md"/>
+            <toc-element topic="Deployment.md"/>
             <toc-element topic="System-images.md"/>
+            <toc-element topic="Create-a-game-bundle.md"/>
             <toc-element topic="Seemless-mouse-intgration-in-Windows-98.md"/>
         </toc-element>
     </toc-element>

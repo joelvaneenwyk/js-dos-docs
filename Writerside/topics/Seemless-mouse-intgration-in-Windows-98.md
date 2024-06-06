@@ -1,6 +1,8 @@
-# Installing Windows 98
+# Installing Windows
 
 > Typically, you don't need to do this. Just fork one of [system drives](System-images.md). 
+> 
+{style="warning"}
 
 ## Seamless mouse integration
 

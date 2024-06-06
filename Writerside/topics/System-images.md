@@ -20,8 +20,6 @@ imgmount 2 sockdrive wss://sockdrive.js-dos.com:8001 system win95-v1
 
 ## 💽 Windows 98 2GB
 
-**NOT YET PUBLISHED, COMING SOON!**
-
 This image includes a bootable disk with the Windows 98 operating system and offers several key features. These include support for **DirectX 3D** and **3Dfx**, as well as seamless mouse integration for user convenience.
 This image is best fit for installing Windows games.
 
