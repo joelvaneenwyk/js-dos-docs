@@ -53,7 +53,7 @@ props.setFullScreen(true); // switch to fullscreen mode
 | **setRoom**          | change ipx room                 | str             |
 | **setFrame**         | open named sidebar panel        | network         |
 | **setBackground**    | change background image         | URL             |
-| **setFullScreen      | change fullscreen mode          | bool            |
+| **setFullScreen**    | change fullscreen mode          | bool            |
 
 ## Events
 

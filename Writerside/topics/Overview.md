@@ -14,7 +14,7 @@ The key features:
 * Support execution in Node and Browsers
 * Multiple backends: DOSBox, DOSBox-X
 * Mobile support (v8 - WIP, v7 - production)
-* Able to run very big games (like Diablo, etc.)
+* Able to run huge games (like Diablo, etc.)
 * Multiplayer support
 * Cloud storage
 * WebAssembly and pure JS versions

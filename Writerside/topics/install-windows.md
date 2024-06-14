@@ -4,7 +4,32 @@
 > 
 {style="warning"}
 
-## Seamless mouse integration
+The process of installing is typical for all OSes. You can use this instruction not only for 
+Windows. Installing process includes:
+
+1. [Fork drive](fork-drive.md)
+2. Setup configuration of DOSBox
+3. Create js-dos bundle
+4. Get installation CD and bootable diskette or bootable CD
+5. Upload this images to FS
+6. Boot from CD or diskette
+7. Install OS
+
+Here is a tutorial video with a Windows 95 installation process.
+
+<tabs>
+    <tab title="Engilsh">
+      <video src="https://youtu.be/jZKlPO5kJvI" />
+    </tab>
+    <tab title="Russian">
+      <video src="https://youtu.be/IS4-b7FVIME" />
+    </tab>
+</tabs>
+
+
+## Tune your installation
+
+### Seamless mouse integration (windows 9x)
 
 1. Download [binary drivers](https://github.com/joncampbell123/doslib/releases)
 2. Mount **install.dsk** from *doslib\windrv\dosboxpi\bin* as A: drive
@@ -20,7 +45,7 @@
 9. Check **Disable in this hardware profile**
 10. Reboot
 
-## Install 3Dfx driver
+### Install 3Dfx driver (windows 9x)
 
 1. Download [3.01 Driver](https://cdn.dos.zone/custom/tools/win98/3dfx_3.01.00.zip)
 2. Extract it somewhere
@@ -46,11 +71,11 @@
 12. Windows will copy the drivers. **Overwrite all files if windows asks.**
 13. Reboot the system when prompted.
 
-## DirectX 9.0
+## DirectX (windows 9x)
 
-1. Download [DirectX 9.0c](https://cdn.dos.zone/custom/tools/win98/dx9.zip), extract it to some folder.
+1. Download [DirectX 6](https://cdn.dos.zone/custom/tools/win98/dx6.zip), [DirectX 7](https://cdn.dos.zone/custom/tools/win98/dx7.zip), [DirectX 8](https://cdn.dos.zone/custom/tools/win98/dx8.zip) or [DirectX 9.0c](https://cdn.dos.zone/custom/tools/win98/dx9.zip), extract it to some folder.
 2. Extract it somewhere
-3. Upload this folder to js-dos before windows boot
+3. Upload this folder to js-dos before Windows boot
 4. Mount FS as drive D:
    ```Bash
    mount d: .
@@ -58,6 +83,6 @@
 
 When windows started run the **D:\Setup.exe**.
 
-## Windows Installer 2.0
+## Windows Installer 2.0 (windows 9x)
 
 Download [Windows Installer 2.0](https://cdn.dos.zone/custom/tools/win98/inst2.exe) and follow same steps as for DirectX 9.0
