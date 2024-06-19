@@ -1,3 +1,3 @@
 # Create a game bundle
 
-**COMING SOON**
+The way to create sockdrive bundles is explained in [Bundle creation](jsdos-bundle.md#game-studio)
