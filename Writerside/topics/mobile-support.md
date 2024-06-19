@@ -13,7 +13,7 @@ joysticks and other that put on top of the game. Each control translates user in
 
 You can put on top as many layers as you want. However, only one layer can be active at the same time.
 
-Using [game-studio](doszone.md#using-a-game-studio) can help to visually create this controls for game.
+Using [game-studio](jsdos-bundle.md#game-studio) can help to visually create this controls for game.
 
 Take a look to our mobile tutorial:
 
