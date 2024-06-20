@@ -1,14 +1,14 @@
 # Player API
 
-js-dos player provide single entry point a `Dos` function, it takes two arguments:
-1. element where to create player window
+js-dos player provides a single entry point a `Dos` function, it takes two arguments:
+1. element where to create a player window
 2. options object to configure player
 
 ```Typescript
 Dos(element: HTMLDivElement, options: DosOptions) => DosProps;
 ```
 
-It returns `DosProps` to control created object
+It returns `DosProps` to a control created player 
 
 ## Options
 
@@ -30,6 +30,8 @@ It returns `DosProps` to control created object
 | **fullScreen**      | auto enter fullscreen mode                                           | bool                                                                                                                                                                                                                                                  | false         |
 | **onEvent**         | listener of js-dos events                                            | function                                                                                                                                                                                                                                              |               |
 | **loginUrl**        | url to redirect back on login                                        | string                                                                                                                                                                                                                                                | location.href |
+| **autoStart**       | automatically starts emulation                                       | boolean                                                                                                                                                                                                                                               | false         |
+| **kiosk**           | swithc kiosk mode, in kiosk mode player ui is hidden                 | boolean                                                                                                                                                                                                                                               | false         |
 
 > All options are optional
 
@@ -55,6 +57,8 @@ props.setFullScreen(true); // switch to fullscreen mode
 | **setFrame**         | open named sidebar panel        | network         |
 | **setBackground**    | change background image         | URL             |
 | **setFullScreen**    | change fullscreen mode          | bool            |
+| **setAutoStart**     | change auto start               | bool            |
+| **setKiosk**         | change kisok mode               | bool            |
 
 ## Events
 
