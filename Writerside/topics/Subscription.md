@@ -1,34 +1,53 @@
 # Subscription
 
+js-dos subscription activates cloud features of player. To subscribe, you need to have an js-dos account.
+
+> The account/subscription is part of player and independent of website.
+> If you change your subscription, it will affect **all websites** that integrate player.
+>
+{style="note"}
+
+> To use all subscription features, you must be **logged in**.
+> 
+{style="note"}
+
 ## Create account
 
-You can create account in any js-dos player on any website. **The account/subscription is the same for all websites**.
-To do this open website with js-dos player (e.g. [v8.js-dos.com](https://v8.js-dos.com)).
+Follow the instructions bellow to create a js-dos account.
 
-**Press the _Login_ button, or icon in sidebar.**
+.doswindow.
 
-![Login](login.jpg)
+1. Press the _Login_ button or icon in the sidebar.
 
-**Switch to _Registration_ tab and fill all inputs**
+| ![Login Button](login-button.jpg) | ![Login](login.jpg) |  
+|-----------------------------------|---------------------|
 
+2. Switch to _SIGN UP_  tab and fill all inputs
 ![Registration](registration.jpg)
+{style="block"}
+
+3. Press _Create Account_  button
+![Create Account](create-account.jpg)
+{style="block"}
 
 ## Login
 
-To login use same steps as for registration but use _Login_ tab
+To log in, use the same steps as for creating an account, but use _Login_ tab instead.
+![Login Tab](login_tab.jpg)
+{style="block"}
 
-When you are logged you will see your name in pre start window.
+When you are logged, you will see your name in pre-start window.
 
 ![Logged](logged.jpg)
 
 ## Subscribe
 
-To subscribe you must be logged in. 
+To subscribe, you must be **logged in**. 
 
 1. Click on _Person_ icon in sidebar.
 2. Use _Buy_ button to subscribe.
 
-![](buy-button.jpg)
+![Buy button](buy-button.jpg)
 
 
 ## Cancel your subscription

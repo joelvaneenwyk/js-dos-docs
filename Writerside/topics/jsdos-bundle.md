@@ -84,6 +84,11 @@ To export use download button.
 When a bundle is ready, the browser will prompt you to save it somewhere on your PC. 
 Now when you have a bundle, go ahead and publish it somewhere.
 
+> Due to the performance reasons js-dos archive created without compression.
+> If you plan to publish it on your website, please repack it with maximum compression.
+> 
+{style="warning"}
+
 > If you need to change the configuration of bundle in the middle, you can use the restart button. It 
 > will redirect you back to the configuration editor.
 > 
@@ -92,6 +97,10 @@ Now when you have a bundle, go ahead and publish it somewhere.
 {style="note"}
 
 ## Sockdrive bundles (Windows)
+
+> It's recommended to use DOS Browser to make the process faster. [DOS Browser](https://dos.zone/download/) has a builtin acceleration
+> for DOS.
+> 
 
 When you need to install Windows program, then you need to use [sockdrive](sockdrive.md). These drives
 are located in js-dos cloud, and transfer only required data to browser. The way of creating the bundle
