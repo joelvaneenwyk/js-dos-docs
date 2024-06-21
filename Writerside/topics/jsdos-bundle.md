@@ -39,10 +39,18 @@ Open <a href="https://dos.zone/studio">Game Studio v7</a>
 >
 >
 {style="note"}
-
-<p>Tutorial:</p>
-<video src="https://www.youtube.com/watch?v=hULc-RsZXow" />
 </tab>
+</tabs>
+
+## How to create bundles for DOS and Windows 95
+
+<tabs>
+    <tab title="Engilsh">
+      <video src="https://youtu.be/erq29Tsd9U8" />
+    </tab>
+    <tab title="Russian">
+      <video src="https://youtu.be/PWugVpHx87M" />
+    </tab>
 </tabs>
 
 To create a bundle, you need to perform the following steps:

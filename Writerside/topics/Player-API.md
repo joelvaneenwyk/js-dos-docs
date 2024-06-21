@@ -62,7 +62,7 @@ props.setFullScreen(true); // switch to fullscreen mode
 
 ## Events
 
-You can listen js-dos event by providing listener in Dos function:
+You can listen to js-dos event by providing listener in Dos function:
 
 ```Javascript
 Dos(elem, {
