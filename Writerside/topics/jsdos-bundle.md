@@ -46,10 +46,10 @@ Open <a href="https://dos.zone/studio">Game Studio v7</a>
 
 <tabs>
     <tab title="Engilsh">
-      <video src="https://youtu.be/erq29Tsd9U8" />
+      <video src="https://www.youtube.com/watch?v=erq29Tsd9U8" />
     </tab>
     <tab title="Russian">
-      <video src="https://youtu.be/PWugVpHx87M" />
+      <video src="https://www.youtube.com/watch?v=PWugVpHx87M" />
     </tab>
 </tabs>
 

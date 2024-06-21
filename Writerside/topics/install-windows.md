@@ -19,10 +19,10 @@ Here is a tutorial video with a Windows 95 installation process.
 
 <tabs>
     <tab title="Engilsh">
-      <video src="https://youtu.be/jZKlPO5kJvI" />
+      <video src="https://www.youtube.com/watch?v=jZKlPO5kJvI" />
     </tab>
     <tab title="Russian">
-      <video src="https://youtu.be/IS4-b7FVIME" />
+      <video src="https://www.youtube.com/watch?v=IS4-b7FVIME" />
     </tab>
 </tabs>
 
