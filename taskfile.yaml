@@ -1,0 +1,28 @@
+# https://taskfile.dev
+# cspell:ignore writerside,taskfile,helpbuilderinspect,xvfb
+
+version: '3'
+
+vars:
+  WRITERSIDE_PRODUCT: Writerside/jsdos
+
+tasks:
+  default:
+    cmds: 
+      - task: build
+
+  build:
+    cmds:
+      - cmd: |
+          docker run \
+            --rm \
+            -v "{{ .TASKFILE_DIR }}":/opt/sources \
+            registry.jetbrains.team/p/writerside/builder/writerside-builder:241.16003 \
+            /bin/bash -c "
+            export DISPLAY=:99 &&
+            Xvfb :99 &
+            /opt/builder/bin/idea.sh helpbuilderinspect \
+            --source-dir /opt/sources \
+            --runner other \
+            --output-dir /opt/sources/output \
+            --product "{{ .WRITERSIDE_PRODUCT }}"
