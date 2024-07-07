@@ -152,10 +152,10 @@ all features are supported, but we will work on it.
 ### `.jsdos`/`jsdos.json`
 
 This file contains additional configuration that does not exist in the dosbox configuration file.
-For example, it's used to configure [virtual controls](mobile-support-v7). If you used game studio
+For example, it's used to configure [virtual controls](mobile-support-v7.md). If you used game studio
 to create bundles then it will also contain all information from `dosbox.conf`. And it looks like:
 
-```json5
+```json
 {
   "layers": [
     {
@@ -163,8 +163,7 @@ to create bundles then it will also contain all information from `dosbox.conf`. 
       "title": "Layer#0",
       "controls": [
         {
-          "row": 0,
-          // ...
+          "row": 0
         }
       ]
     }
