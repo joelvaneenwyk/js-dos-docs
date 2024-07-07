@@ -149,13 +149,13 @@ So any next boot will have them no need to reexport a bundle.
 This file is a regular [dosbox configuration](https://www.dosbox.com/wiki/Dosbox.conf). Not
 all features are supported, but we will work on it.
 
-### .jsdos/jsdos.json
+### `.jsdos`/`jsdos.json`
 
 This file contains additional configuration that does not exist in the dosbox configuration file.
 For example, it's used to configure [virtual controls](mobile-support-v7). If you used game studio
 to create bundles then it will also contain all information from `dosbox.conf`. And it looks like:
 
-```json
+```json5
 {
   "layers": [
     {
@@ -163,7 +163,13 @@ to create bundles then it will also contain all information from `dosbox.conf`. 
       "title": "Layer#0",
       "controls": [
         {
-          "row": 0
+          "row": 0,
+          // ...
+        }
+      ]
+    }
+  ]
+}
 ```
 
 This file can contain any configuration that you want. You can access it with [Command Interface](command-interface.md).

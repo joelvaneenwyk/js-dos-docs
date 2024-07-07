@@ -1,28 +1,16 @@
 #!/usr/bin/env python3
+"""Generates GitHub pages for `js-dos` project."""
+# pylint:disable=invalid-name
+# cspell:ignore doswindow,jsdos,ghpages
 
 import os
 from os.path import join, exists
 from zipfile import ZipFile
 
-# Get the current directory of this script
-current_dir = os.path.dirname(os.path.abspath(__file__))
-
-ghpages_root = join("..", "js-dos-gh-pages")
-archive = "webHelpJSDOS2-all.zip"
-
-if not exists(join(ghpages_root, "CNAME")):
-    print("Can't find gh-pages in", ghpages_root)
-    exit(1)
-
-if not exists(archive):
-    print("Document archive not found")
-    exit(2)
-
-ZipFile(archive).extractall(ghpages_root)
-
 
 def inject_doswindow(file: str):
-    with open(file, "r") as f:
+    """Injects DOS window into the subscription page."""
+    with open(file, "r", encoding="utf-8") as f:
         contents = f.read().replace(
             ".doswindow.",
             """
@@ -32,7 +20,8 @@ def inject_doswindow(file: str):
 <script>
     const params = new URLSearchParams(location.search);
     const refresh_token = params.get("jsdos_token");
-    document.getElementById("doswindow").src = "/iframe/blank.html" + (refresh_token ? "?jsdos_token=" + refresh_token : "");
+    const token_param = refresh_token ? "?jsdos_token=" + refresh_token : "";
+    document.getElementById("doswindow").src = "/iframe/blank.html${token_param}";
     if (refresh_token) {
         window.history.replaceState(null, "", "/subscription.html#create-account");
     }
@@ -40,8 +29,30 @@ def inject_doswindow(file: str):
 """,
         )
 
-    with open(file, "w") as f:
+    with open(file, "w", encoding="utf-8") as f:
         f.write(contents)
 
 
-inject_doswindow(join(ghpages_root, "subscription.html"))
+def main():
+    """Main entry point."""
+    # Get the current directory of this script
+    current_dir = os.path.dirname(os.path.abspath(__file__))
+
+    ghpages_root = join(current_dir, "..", "js-dos-gh-pages")
+    archive = "webHelpJSDOS2-all.zip"
+
+    if not exists(join(ghpages_root, "CNAME")):
+        print("Can't find gh-pages in", ghpages_root)
+        exit(1)
+
+    if not exists(archive):
+        print("Document archive not found")
+        exit(2)
+
+    ZipFile(archive).extractall(ghpages_root)
+
+    inject_doswindow(join(ghpages_root, "subscription.html"))
+
+
+if __name__ == "__main__":
+    main()
