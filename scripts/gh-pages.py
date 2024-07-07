@@ -1,11 +1,12 @@
 #!/usr/bin/env python3
 """Generates GitHub pages for `js-dos` project."""
 # pylint:disable=invalid-name
-# cspell:ignore doswindow,jsdos,ghpages
 
+import sys
 import os
 from os.path import join, exists
 from zipfile import ZipFile
+import logging
 
 
 def inject_doswindow(file: str):
@@ -33,26 +34,39 @@ def inject_doswindow(file: str):
         f.write(contents)
 
 
-def main():
+def main() -> int:
     """Main entry point."""
-    # Get the current directory of this script
-    current_dir = os.path.dirname(os.path.abspath(__file__))
 
-    ghpages_root = join(current_dir, "..", "js-dos-gh-pages")
-    archive = "webHelpJSDOS2-all.zip"
+    try:
+        # Get the current directory of this script
+        current_dir = os.path.dirname(os.path.abspath(__file__))
 
-    if not exists(join(ghpages_root, "CNAME")):
-        print("Can't find gh-pages in", ghpages_root)
-        exit(1)
+        ghpages_root = join(current_dir, "..", "js-dos-gh-pages")
+        archive = "webHelpJSDOS2-all.zip"
 
-    if not exists(archive):
-        print("Document archive not found")
-        exit(2)
+        # Initialize logger
+        logging.basicConfig(
+            level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s"
+        )
+        logger = logging.getLogger(__name__)
 
-    ZipFile(archive).extractall(ghpages_root)
+        if not exists(join(ghpages_root, "CNAME")):
+            logger.error("Can't find gh-pages in: '%s'", ghpages_root)
+            return 1
 
-    inject_doswindow(join(ghpages_root, "subscription.html"))
+        if not exists(archive):
+            logger.error("Document archive not found: '%s'", archive)
+            return 2
+
+        with ZipFile(archive) as zip_file:
+            zip_file.extractall(ghpages_root)
+
+        inject_doswindow(join(ghpages_root, "subscription.html"))
+    except Exception as e:  # pylint:disable=broad-except
+        logger.error(e)
+
+    return 0
 
 
 if __name__ == "__main__":
-    main()
+    sys.exit(main())
