@@ -1,5 +1,11 @@
+#!/usr/bin/env python3
+
+import os
 from os.path import join, exists
 from zipfile import ZipFile
+
+# Get the current directory of this script
+current_dir = os.path.dirname(os.path.abspath(__file__))
 
 ghpages_root = join("..", "js-dos-gh-pages")
 archive = "webHelpJSDOS2-all.zip"
@@ -14,9 +20,12 @@ if not exists(archive):
 
 ZipFile(archive).extractall(ghpages_root)
 
+
 def inject_doswindow(file: str):
     with open(file, "r") as f:
-        contents = f.read().replace(".doswindow.", """
+        contents = f.read().replace(
+            ".doswindow.",
+            """
 <div style="border: 2px solid blue; height: 600px;">
     <iframe id="doswindow" style="width: 100%; height: 100%;"></iframe>
 </div>
@@ -28,10 +37,11 @@ def inject_doswindow(file: str):
         window.history.replaceState(null, "", "/subscription.html#create-account");
     }
 </script>
-""")
+""",
+        )
 
     with open(file, "w") as f:
         f.write(contents)
-        
+
+
 inject_doswindow(join(ghpages_root, "subscription.html"))
-        
