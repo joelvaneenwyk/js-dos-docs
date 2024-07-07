@@ -140,3 +140,5 @@ pdfSource*.pdf
 webHelp*.zip
 
 output/
+.venv/
+.git/
