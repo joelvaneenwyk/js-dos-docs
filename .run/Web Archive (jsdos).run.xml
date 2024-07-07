@@ -1,0 +1,8 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="Web Archive (jsdos)" type="StardustRunConfiguration" factoryName="save-as-zip">
+    <option name="folderPath" value="$PROJECT_DIR$" />
+    <option name="instanceId" value="jsdos" />
+    <option name="instanceName" value="js-dos" />
+    <method v="2" />
+  </configuration>
+</component>

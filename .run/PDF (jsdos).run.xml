@@ -1,0 +1,15 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="PDF (jsdos)" type="StardustRunConfiguration" factoryName="build-pdf">
+    <option name="copyright" />
+    <option name="description" />
+    <option name="folderPath" value="$PROJECT_DIR$" />
+    <option name="footer" />
+    <option name="header" />
+    <option name="instanceId" value="jsdos" />
+    <option name="instanceName" value="js-dos" />
+    <option name="layout" />
+    <option name="logoPath" />
+    <option name="title" />
+    <method v="2" />
+  </configuration>
+</component>
