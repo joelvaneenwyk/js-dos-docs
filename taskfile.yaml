@@ -1,5 +1,4 @@
 # https://taskfile.dev
-# cspell:ignore writerside,taskfile,helpbuilderinspect,xvfb
 
 version: '3'
 
@@ -13,19 +12,22 @@ tasks:
 
   build:
     vars:
-      DOCKER_SOURCES_PATH: /opt/sources
-      BUILD_COMMAND: >-
+      # This is expected to be the root directory and is 'not' meant to be
+      # the 'Writerside' subdirectory.
+      DOCKER_HOST_SOURCES_PATH: '{{ .TASKFILE_DIR }}'
+      # This is hardcoded to '/opt/sources' in the Docker container.
+      DOCKER_CONTAINER_SOURCES_PATH: /opt/sources
+      DOCKER_WRITERSIDE_BUILDER_COMMAND: >-
         export DISPLAY=:99 &&
         Xvfb :99 &
         /opt/builder/bin/idea.sh helpbuilderinspect
-        --source-dir "{{ toSlash .DOCKER_SOURCES_PATH }}"
+        --source-dir "{{ toSlash .DOCKER_CONTAINER_SOURCES_PATH }}"
         --runner other
-        --output-dir "{{ joinPath .DOCKER_SOURCES_PATH "output" | toSlash }}"
+        --output-dir "{{ joinPath .DOCKER_CONTAINER_SOURCES_PATH "output" | toSlash }}"
         --product "{{ .WRITERSIDE_PRODUCT }}"
     cmds:
       - cmd: >-
           docker run --rm
-          -v "{{ .TASKFILE_DIR }}":"{{ toSlash .DOCKER_SOURCES_PATH }}"
+          -v "{{ fromSlash .DOCKER_HOST_SOURCES_PATH }}":"{{ toSlash .DOCKER_CONTAINER_SOURCES_PATH }}"
           registry.jetbrains.team/p/writerside/builder/writerside-builder:241.16003
-          /bin/bash -c '{{ .BUILD_COMMAND }}'
-
+          /bin/bash -c '{{ .DOCKER_WRITERSIDE_BUILDER_COMMAND }}'

@@ -1,0 +1,7 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="Build" type="CompoundRunConfigurationType">
+    <toRun name="PDF (jsdos)" type="StardustRunConfiguration" />
+    <toRun name="Web Archive (jsdos)" type="StardustRunConfiguration" />
+    <method v="2" />
+  </configuration>
+</component>
